@@ -44,7 +44,43 @@ body {
   top: 0;
   z-index: 10;
 }
+.table img {
+  height: 24px;
+  width: 24px;
+}
+.logo-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain; /* o 'cover' si quieres que se recorte */
+  margin-right: 6px;
+  vertical-align: middle;
+}
 
-  
-  
+.champions-wrapper {
+  background-image: url('img/FondoChampions.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.champions-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 50, 0.7); /* Fondo azul oscuro con transparencia */
+  z-index: 1;
+}
+
+.champions-wrapper .container {
+  position: relative;
+  z-index: 2;
+}
+.img-ajustada {
+  height: 400px;
+  width: 100%;       
+  object-fit: cover;
+}
+
+
   
