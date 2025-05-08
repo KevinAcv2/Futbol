@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="shortcut icon" href="/static/img/Logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="/static/css/estilos.css">
   <title>FutbolRed Kevin</title>
   <style>
    
@@ -14,7 +15,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
         <div class="container" id="liga-betplay">
-          <a class="navbar-brand" href="#"><img src="img/Logo.jpg" alt="Logo" width="30"> FutbolRed</a>
+          <a class="navbar-brand" href="#"><img src="static/img/Logo.jpg" alt="Logo" width="30"> FutbolRed</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -22,7 +23,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="Index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ url_for('inicio') }}">Inicio</a></li>
     
               <!-- Dropdown Fútbol Colombiano -->
               <li class="nav-item dropdown">
@@ -31,7 +32,7 @@
                 </a>
                 <ul class="dropdown-menu">
                   
-                  <li><a class="dropdown-item" href="CopaBetplay.html">Copa BetPlay</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('copaB') }}">Copa BetPlay</a></li>
                 </ul>
               </li>
     
@@ -41,9 +42,10 @@
                   Internacional
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="LigaEspaña.html">Liga de España</a></li>
-                  <li><a class="dropdown-item" href="PremierLeage.html">Premier League</a></li>
-                  <li><a class="dropdown-item" href="ChampionsLeage.html">Champions League</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('ligaE') }}">Liga de España</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('premierL') }}">Premier League</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('championsL') }}">Champions League</a></li>
+                  championsL
                 </ul>
               </li>
             </ul>
@@ -52,26 +54,26 @@
       </nav><br>
       <div class="container">
         <h5>LIGA BETPLAY</h5>
-        <a class="navbar-brand" href="#"><img src="img/EscudoJunior.png" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/santafe.png" alt="Logo" width="40"></a>
-        <a class="navbar-brand" href="#"><img src="img/nacional" alt="Logo" width="40"></a>
-        <a class="navbar-brand" href="#"><img src="img/medellin" alt="Logo" width="55"></a>
-        <a class="navbar-brand" href="#"><img src="img/cali" alt="Logo" width="62"></a>
-        <a class="navbar-brand" href="#"><img src="img/junior" alt="Logo" width="55"></a>
-        <a class="navbar-brand" href="#"><img src="img/oncecaldas" alt="Logo" width="45"></a>
-        <a class="navbar-brand" href="#"><img src="img/americacali" alt="Logo" width="40"></a>
-        <a class="navbar-brand" href="#"><img src="img/jaguares" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/tolima" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/unionmagdalena" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/alianza" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/envigado" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/aguilasdoradas" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/pasto" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/cucuta" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/patriotas" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/huils" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/equidad" alt="Logo" width="50"></a>
-        <a class="navbar-brand" href="#"><img src="img/bucaramanga" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/EscudoJunior.png" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/santafe.png" alt="Logo" width="40"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/nacional" alt="Logo" width="40"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/medellin" alt="Logo" width="55"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/cali" alt="Logo" width="62"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/junior" alt="Logo" width="55"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/oncecaldas" alt="Logo" width="45"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/americacali" alt="Logo" width="40"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/jaguares" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/tolima" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/unionmagdalena" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/alianza" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/envigado" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/aguilasdoradas" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/pasto" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/cucuta" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/patriotas" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/huils" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/equidad" alt="Logo" width="50"></a>
+        <a class="navbar-brand" href="#"><img src="static/img/bucaramanga" alt="Logo" width="50"></a>
         <div class="container highlight mt-5"></div>
 
       <!-- TABLA -->  
@@ -100,7 +102,7 @@
                   <td>1</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/América de Cali.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/América de Cali.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">América de Cali</span>
                     </div>
                   </td>
@@ -117,7 +119,7 @@
                   <td>2</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Atlético Nacional.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Atlético Nacional.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Atlético Nacional</span>
                     </div>
                   </td>
@@ -135,7 +137,7 @@
                   <td>
                     <div class="align-items-center">
                       <div class="flex-shrink-0 me-2">
-                        <p><img src="img/Junior.png" alt="Escudo" class="logo-img">junior</p>
+                        <p><img src="static/img/Junior.png" alt="Escudo" class="logo-img">junior</p>
                       </div>
                       <div class="text-start">
                       </div>
@@ -154,7 +156,7 @@
                   <td>4</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Millonarios.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Millonarios.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Millonarios</span>
                     </div>
                   </td>
@@ -171,7 +173,7 @@
                   <td>5</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Independiente Medellín.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Independiente Medellín.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Independiente Medellín</span>
                     </div>
                   </td>
@@ -188,7 +190,7 @@
                   <td>6</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Independiente Santa Fe.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Independiente Santa Fe.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Independiente Santa Fe</span>
                     </div>
                   </td>
@@ -205,7 +207,7 @@
                   <td>7</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Deportes Tolima.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Deportes Tolima.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Deportes Tolima</span>
                     </div>
                   </td>
@@ -222,7 +224,7 @@
                   <td>8</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Once Caldas.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Once Caldas.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Once Caldas</span>
                     </div>
                   </td>
@@ -239,7 +241,7 @@
                   <td>9</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Deportivo Pasto.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Deportivo Pasto.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Deportivo Pasto</span>
                     </div>
                     <td>26</td>
@@ -255,7 +257,7 @@
                   <td>10</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Deportivo Cali.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Deportivo Cali.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Deportivo Cali</span>
                     </div>
                   </td>
@@ -272,7 +274,7 @@
                   <td>11</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Alianza.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Alianza.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Alianza</span>
                     </div>
                   </td>
@@ -289,7 +291,7 @@
                   <td>12</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Deportivo Pereira.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Deportivo Pereira.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Deportivo Pereira</span>
                     </div>
                   </td>
@@ -306,7 +308,7 @@
                   <td>13</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Atlético Bucaramanga.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Atlético Bucaramanga.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Atlético Bucaramanga</span>
                     </div>
                   </td>
@@ -323,7 +325,7 @@
                   <td>14</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Envigado.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Envigado.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Envigado</span>
                     </div>
                   </td>
@@ -340,7 +342,7 @@
                   <td>15</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Llaneros.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Llaneros.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Llaneros</span>
                     </div>
                   </td>
@@ -357,7 +359,7 @@
                   <td>16</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Fortaleza CEIF.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Fortaleza CEIF.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Fortaleza CEIF</span>
                     </div>
                   </td>
@@ -374,7 +376,7 @@
                   <td>17</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/Boyacá Chicó.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/Boyacá Chicó.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">Boyacá Chicó</span>
                     </div>
                   </td>
@@ -391,7 +393,7 @@
                   <td>18</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/aguilasdoradas" alt="Escudo" class="logo-img">
+                      <img src="static/img/aguilasdoradas" alt="Escudo" class="logo-img">
                       <span class="ms-2">	Águilas Doradas</span>
                     </div>
                   </td>
@@ -408,7 +410,7 @@
                   <td>19</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/La Equidad.png" alt="Escudo" class="logo-img">
+                      <img src="static/img/La Equidad.png" alt="Escudo" class="logo-img">
                       <span class="ms-2">La Equidad</span>
                     </div>
                   </td>
@@ -425,7 +427,7 @@
                   <td>20</td>
                   <td>
                     <div class="align-items-center">
-                      <img src="img/unionmagdalena" alt="Escudo" class="logo-img">
+                      <img src="static/img/unionmagdalena" alt="Escudo" class="logo-img">
                       <span class="ms-2">Unión Magdalena</span>
                     </div>
                   </td>
@@ -440,12 +442,26 @@
                 </tr>
               </tbody>
             </table>
+            <h1>Estadísticas Futbolísticas</h1>
+              <h3>Calcular Promedio de Goles por Partido</h3>
+              
+              <form action="promedio_goles" method="POST">
+                  <label>Total de goles:</label>
+                  <input type="number" name="goles" required><br><br>
+                  <label>Total de partidos:</label>
+                  <input type="number" name="partidos" required><br><br>
+                  <button type="submit">Calcular</button>
+              </form>
+
+              {% if promedio is not none %}
+                  <h4>Promedio de goles por partido: {{ promedio }}</h4>
+              {% endif %}
             
             <!-- CARTAS -->
             <div class="card mb-3 w-100">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="img/SinFalcao.jpeg" class="img-fluid rounded-start" alt="...">
+                  <img src="static/img/SinFalcao.jpeg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -459,7 +475,7 @@
             <div class="card mb-3 w-100">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="img/CompraLaLiga.jpeg" class="img-fluid rounded-start" alt="...">
+                  <img src="static/img/CompraLaLiga.jpeg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -473,7 +489,7 @@
             <div class="card mb-3 w-100">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="img/RenovaFalcao.jpeg" class="img-fluid rounded-start" alt="...">
+                  <img src="static/img/RenovaFalcao.jpeg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -487,7 +503,7 @@
             <div class="card mb-3 w-100">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="img/CampinConcierto.jpeg" class="img-fluid rounded-start" alt="...">
+                  <img src="static/img/CampinConcierto.jpeg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -501,7 +517,7 @@
             <div class="card mb-3 w-100">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="img/EquipoFPC.jpeg" class="img-fluid rounded-start" alt="...">
+                  <img src="static/img/EquipoFPC.jpeg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -515,7 +531,7 @@
             <div class="card mb-3 w-100">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="img/InvacionEstadio.jpeg" class="img-fluid rounded-start" alt="...">
+                  <img src="static/img/InvacionEstadio.jpeg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -529,7 +545,7 @@
             <div class="card mb-3 w-100">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="img/LoHizoSilva.jpeg" class="img-fluid rounded-start" alt="...">
+                  <img src="static/img/LoHizoSilva.jpeg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -543,7 +559,7 @@
             <div class="card mb-3 w-100">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="img/ContratoJoyas.jpeg" class="img-fluid rounded-start" alt="...">
+                  <img src="static/img/ContratoJoyas.jpeg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -557,7 +573,7 @@
             <div class="card mb-3 w-100">
               <div class="row g-0">
                 <div class="col-md-4">
-                  <img src="img/MorirAtentado.jpeg" class="img-fluid rounded-start" alt="...">
+                  <img src="static/img/MorirAtentado.jpeg" class="img-fluid rounded-start" alt="...">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body">
@@ -568,11 +584,8 @@
                 </div>
               </div>
             </div>
-            
           </div>
         </div>
-      </body>
-
-      
+      </body> 
 </body>
 </html>

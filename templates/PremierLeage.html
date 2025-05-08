@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="shortcut icon" href="/static/img/Logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="/static/css/estilos.css">
   <title>FutbolRed Kevin</title>
   <style>
    
@@ -14,7 +15,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
         <div class="container" id="liga-betplay">
-          <a class="navbar-brand" href="#"><img src="img/Logo.jpg" alt="Logo" width="30"> FutbolRed</a>
+          <a class="navbar-brand" href="#"><img src="/static/img/Logo.jpg" alt="Logo" width="30"> FutbolRed</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -22,7 +23,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="Index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ url_for('inicio') }}">Inicio</a></li>
     
               <!-- Dropdown Fútbol Colombiano -->
               <li class="nav-item dropdown">
@@ -30,8 +31,8 @@
                   Fútbol Colombiano
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="liga-betplay">Liga BetPlay</a></li>
-                  <li><a class="dropdown-item" href="CopaBetplay.html">Copa BetPlay</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('liga') }}">Liga BetPlay</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('copaB') }}">Copa BetPlay</a></li>
                 </ul>
               </li>
     
@@ -41,8 +42,8 @@
                   Internacional
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="LigaEspaña.html">Liga de España</a></li>
-                  <li><a class="dropdown-item" href="ChampionsLeage.html">Champions League</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('ligaE') }}">Liga de España</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('championsL') }}">Champions League</a></li>
                 </ul>
               </li>
             </ul>
@@ -56,7 +57,7 @@
           <!-- Noticia destacada -->
           <div class="col-md-8 main-news">
             <h1>Inglaterra - Premier League: Bournemouth vs Aston Villa Fecha 36</h1>
-            <img src="img/BournemouthAston Villa.webp" alt="Barcelona">
+            <img src="/static/img/BournemouthAston Villa.webp" alt="Barcelona">
             <p>El próximo sabado 10 de mayo, a partir de las 11:30 horas, Aston Villa visita a Bournemouth en el Vitality Stadium, por el duelo correspondiente a la fecha 36 de la Premier League. Los equipos llegan a esta jornada con mentalidad ganadora y es de esperar un atractivo partido. Los dos vencieron a sus rivales en su último partido e intentarán un nuevo triunfo.</p>
             <P>Bournemouth ganó su último duelo ante Arsenal por 2 a 1. Se enfrenta a una nueva oportunidad de vencer y no dejar en el camino puntos para remontar en la tabla de posiciones. En las últimas jornadas, tuvo una cifra de 4 goles en contra y 6 a favor.</P>
           </div> 
@@ -64,7 +65,7 @@
           <div class="card mb-3 w-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/Fulham vs Everton.webp" class="img-fluid rounded-start" alt="...">
+                <img src="/static/img/Fulham vs Everton.webp" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -78,7 +79,7 @@
           <div class="card mb-3 w-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/WolverhamptonvsBrighton.webp" class="img-fluid rounded-start" alt="...">
+                <img src="/static/img/WolverhamptonvsBrighton.webp" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -92,7 +93,7 @@
           <div class="card mb-3 w-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/Southampton vs Manchester City.webp" class="img-fluid rounded-start" alt="...">
+                <img src="/static/img/Southampton vs Manchester City.webp" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -106,7 +107,7 @@
           <div class="card mb-3 w-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/Ipswich Town vs Brentford.webp" class="img-fluid rounded-start" alt="...">
+                <img src="/static/img/Ipswich Town vs Brentford.webp" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -120,7 +121,7 @@
           <div class="card mb-3 w-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/LuizDiaz.jpeg" class="img-fluid rounded-start" alt="...">
+                <img src="/static/img/LuizDiaz.jpeg" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -134,7 +135,7 @@
           <div class="card mb-3 w-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/RealPlan.jpeg" class="img-fluid rounded-start" alt="...">
+                <img src="/static/img/RealPlan.jpeg" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -148,7 +149,7 @@
           <div class="card mb-3 w-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/DanielMuñoz.webp" class="img-fluid rounded-start" alt="...">
+                <img src="/static/img/DanielMuñoz.webp" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -162,7 +163,7 @@
           <div class="card mb-3 w-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/Arne Slot.webp" class="img-fluid rounded-start" alt="...">
+                <img src="/static/img/Arne Slot.webp" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
@@ -176,7 +177,7 @@
           <div class="card mb-3 w-100">
             <div class="row g-0">
               <div class="col-md-4">
-                <img src="img/DiazFavorito.jpeg" class="img-fluid rounded-start" alt="...">
+                <img src="/static/img/DiazFavorito.jpeg" class="img-fluid rounded-start" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">

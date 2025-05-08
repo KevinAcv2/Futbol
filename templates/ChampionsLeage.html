@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="shortcut icon" href="/static/img/Logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="/static/css/estilos.css">
   <title>FutbolRed Kevin</title>
   <style>
   </style>
@@ -13,7 +14,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-sm">
         <div class="container" id="liga-betplay">
-          <a class="navbar-brand" href="#"><img src="img/Logo.jpg" alt="Logo" width="30"> FutbolRed</a>
+          <a class="navbar-brand" href="#"><img src="/static/img/Logo.jpg" alt="Logo" width="30"> FutbolRed</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -21,7 +22,7 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="Index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="{{ url_for('inicio') }}">Inicio</a></li>
     
               <!-- Dropdown Fútbol Colombiano -->
               <li class="nav-item dropdown">
@@ -29,8 +30,8 @@
                   Fútbol Colombiano
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="LigaBetplay.html">Liga BetPlay</a></li>
-                  <li><a class="dropdown-item" href="CopaBetplay.html">Copa BetPlay</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('liga') }}">Liga BetPlay</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('copaB') }}">Copa BetPlay</a></li>
                 </ul>
               </li>
     
@@ -40,8 +41,8 @@
                   Internacional
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="LigaEspaña.html">Liga de España</a></li>
-                  <li><a class="dropdown-item" href="PremierLeage.html">Premier League</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('ligaE') }}">Liga de España</a></li>
+                  <li><a class="dropdown-item" href="{{ url_for('premierL') }}">Premier League</a></li>
                 </ul>
               </li>
             </ul>
@@ -56,7 +57,7 @@
             <!-- Noticia principal -->
             <div class="col-md-8">
               <div class="card bg-transparent border-0">
-                <img src="img/Lautaro.jpeg" class="img-fluid rounded img-ajustada object-fit-cover" alt="Noticia principal">
+                <img src="/static/img/Lautaro.jpeg" class="img-fluid rounded img-ajustada object-fit-cover" alt="Noticia principal">
                 <div class="mt-3">
                   <small class="text-white-50">MAYO 8 DE 2025</small>
                   <h5 class="fw-bold text-white">ABC de la final de la Champions League: así se define el nuevo campeón</h5>
@@ -67,14 +68,14 @@
             <!-- Noticias secundarias -->
             <div class="col-md-4 d-flex flex-column gap-3">
               <div class="card bg-transparent border-0">
-                <img src="img/semifinal.jpeg" class="img-fluid rounded" alt="Semifinal">
+                <img src="/static/img/semifinal.jpeg" class="img-fluid rounded" alt="Semifinal">
                 <div class="mt-2">
                   <small class="text-white-50">MAYO 8 DE 2025</small>
                   <p class="mb-0 fw-semibold text-white">¡Inolvidable semifinal! Gladiadores de Inter eliminaron a Barcelona</p>
                 </div>
               </div>
               <div class="card bg-transparent border-0">
-                <img src="img/ArsenalPierde.jpeg" class="img-fluid rounded" alt="PSV">
+                <img src="/static/img/ArsenalPierde.jpeg" class="img-fluid rounded" alt="PSV">
                 <div class="mt-2">
                   <small class="text-white-50">MARZO 4 DE 2025</small>
                   <p class="mb-0 fw-semibold text-white">EN VIVO: ¿Ya clasificaron? Arsenal le dio tremenda goleada al PSV.</p>
@@ -104,7 +105,7 @@
             <!-- GRUPO DE CARTAS -->
             <div class="card-group">
               <div class="card">
-                <img src="img/Acerbi.jpeg" class="card-img-top" alt="...">
+                <img src="/static/img/Acerbi.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><strong>Acerbi, renacido que salvó a Inter, superó cáncer, alcohol y depresión</strong></h5>
                   <p class="card-text">Asombrosa historia de vida contrasta con burlas desde Barcelona.</p>
@@ -112,7 +113,7 @@
                 </div>
               </div>
               <div class="card">
-                <img src="img/LuisEnrrique.jpeg" class="card-img-top" alt="...">
+                <img src="/static/img/LuisEnrrique.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><strong>Luis Enrique reconoció que PSG sufrió de más para vencer a Arsenal</strong></h5>
                   <p class="card-text">El técnico aseguró que tuvo que cambiar el plan del partido sobre la marcha.</p>
@@ -120,7 +121,7 @@
                 </div>
               </div>
               <div class="card">
-                <img src="img/PSGINTER.jpeg" class="card-img-top" alt="...">
+                <img src="/static/img/PSGINTER.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><strong>PSG e Inter jugarán la segunda final entre italianos y franceses</strong></h5>
                   <p class="card-text">Solo se ha dado una definición por el título entre clubes de ese país. Fue hace 32 años.</p>
@@ -130,7 +131,7 @@
             </div>
             <div class="card-group">
               <div class="card">
-                <img src="img/PresidenteBarcelona.jpeg" class="card-img-top" alt="...">
+                <img src="/static/img/PresidenteBarcelona.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><strong>Presidente de Barcelona culpó a árbitros por eliminación en Champions</strong></h5>
                   <p class="card-text">Joan Laporta explotó con el juez polaco Szymon Marciniak tras la derrota con Inter.</p>
@@ -138,7 +139,7 @@
                 </div>
               </div>
               <div class="card">
-                <img src="img/PSG RUMBO.jpeg" class="card-img-top" alt="...">
+                <img src="/static/img/PSG RUMBO.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><strong>PSG rumbo a segunda final en Champions: victoria ante un débil Arsenal</strong></h5>
                   <p class="card-text">El cuadro de Luis Enrique afrontará su segunda final en busca de conquistar la 'orejona'.</p>
@@ -146,7 +147,7 @@
                 </div>
               </div>
               <div class="card">
-                <img src="img/Finalista.jpeg" class="card-img-top" alt="...">
+                <img src="/static/img/Finalista.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><strong>Nunca sufrió el finalista, rival otra vez falló: reviva PSG vs Arsenal</strong></h5>
                   <p class="card-text">La semifinal terminó 3-1 a favor de los de Luis Enrique, que van por Inter.</p>
@@ -156,7 +157,7 @@
             </div>
             <div class="card-group">
               <div class="card">
-                <img src="img/PSG Rivales.jpeg" class="card-img-top" alt="...">
+                <img src="/static/img/PSG Rivales.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><strong>¿Cómo le ha ido a PSG ante rivales ingleses de local por Champions?</strong></h5>
                   <p class="card-text">El cuadro parisino recibe a Arsenal en la vuelta de su semifinal de Champions League.</p>
@@ -164,7 +165,7 @@
                 </div>
               </div>
               <div class="card">
-                <img src="img/ArsenalAnhela.jpeg" class="card-img-top" alt="...">
+                <img src="/static/img/ArsenalAnhela.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><strong>PSG y Arsenal van por una anhelada y poco común final de Champions</strong></h5>
                   <p class="card-text">Ambos equipos buscan hacer historia. La serie aún está abierta y con leve ventaja de los franceses.</p>
@@ -172,7 +173,7 @@
                 </div>
               </div>
               <div class="card">
-                <img src="img/sommer.jpeg" class="card-img-top" alt="...">
+                <img src="/static/img/sommer.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title"><strong>Sommer, culpable de final de Inter: 'mi atajada favorita fue a Yamal'</strong></h5>
                   <p class="card-text">El arquero tuvo una efectividad notable y salvó al clasificación a la final de Champions.</p>
