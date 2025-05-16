@@ -17,7 +17,7 @@ def copaB():
 
 @app.route('/ligaE')
 def ligaE():
-   return render_template('LigaEspaña.html')
+   return render_template('LigaEspana.html')
 
 @app.route('/premierL')
 def premierL():
